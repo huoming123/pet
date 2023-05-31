@@ -19,12 +19,11 @@
 本项目是基于springboot+vue的前后端分离项目框架;以Windows10为操作系统，基于java的jdk1.8;采用idea软件为开发后台工具，vscode作为前端的开发工具,element-ui作为前端的UI框架。运用mysql进行数据库存储;服务器为本机电脑。  
 
 #项目功能结构  
-![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
+![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E6%80%BB%E4%BD%93%E5%8A%9F%E8%83%BD%E5%9B%BE.jpg)
 
 #项目界面截图  
 
-![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
- ![Image text] (https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.png)  
+![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)  
 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E7%99%BB%E8%AE%B0.png)   
   ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2.png)
        ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%89%A9%E7%A7%8D%E5%BD%95%E5%85%A5.png）
