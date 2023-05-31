@@ -26,9 +26,8 @@
 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)  
 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E7%99%BB%E8%AE%B0.png)   
   ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2.png)
-       ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%89%A9%E7%A7%8D%E5%BD%95%E5%85%A5.png）
-          ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%93%81%E7%A7%8D%E5%BD%95%E5%85%A5.png)
-            ![Image text] (https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%85%AC%E5%91%8A%E4%BF%A1%E6%81%AF%E5%BD%95%E5%85%A5.png)
+       ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%89%A9%E7%A7%8D%E5%BD%95%E5%85%A5.png)
+          ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%93%81%E7%A7%8D%E5%BD%95%E5%85%A5.png)  
             ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%9B%91%E6%8A%A4%E4%BA%BA%E5%B9%B4%E9%BE%84%E5%88%86%E5%B8%83%E5%9B%BE.png)
                ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E5%88%86%E6%9E%90.png)
                 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E7%99%BB%E8%AE%B0%E5%88%86%E6%9E%90.png)
