@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.design.petmanagement.mapper.PetMapper">
+
+    <resultMap type="com.design.petmanagement.pojo.Pet" id="PetMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="petName" column="pet_name" jdbcType="VARCHAR"/>
+        <result property="age" column="age" jdbcType="INTEGER"/>
+        <result property="sex" column="sex" jdbcType="VARCHAR"/>
+        <result property="image" column="image" jdbcType="VARCHAR"/>
+        <result property="birthday" column="birthday" jdbcType="TIMESTAMP"/>
+        <result property="varietyId" column="variety_id" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+        <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="adopt" column="adopt" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="vaccinat" column="vaccinat" jdbcType="INTEGER"/>
+        <result property="vaccinatImages" column="vaccinat_images" jdbcType="VARCHAR"/>
+        <result property="descb" column="descb" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="buyShop" column="buy_shop" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="PetMap">
+        select
+          id, pet_name, age, sex, image, birthday, variety_id, created_at, created_by, updated_by, updated_at, adopt, user_id, vaccinat, vaccinat_images, descb, buy_shop
+        from pet
+        where id = #{id}
+    </select>
+
+    
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into pet(pet_name, age, sex, image, birthday, variety_id, created_at, created_by, updated_by, updated_at, adopt, user_id, vaccinat, vaccinat_images, descb, buy_shop)
+        values (#{petName}, #{age}, #{sex}, #{image}, #{birthday}, #{varietyId}, now(), #{createdBy}, #{updatedBy}, #{updatedAt}, #{adopt}, #{userId}, #{vaccinat}, #{vaccinatImages}, #{descb}, #{buyShop})
+    </insert>
+
+   
+    <!--通过主键修改数据-->
+    <update id="update">
+        update pet
+        <set>
+            <if test="petName != null and petName != ''">
+                pet_name = #{petName},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="sex != null and sex != ''">
+                sex = #{sex},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="varietyId != null and varietyId != ''">
+                variety_id = #{varietyId},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="createdBy != null and createdBy != ''">
+                created_by = #{createdBy},
+            </if>
+            <if test="updatedBy != null and updatedBy != ''">
+                updated_by = #{updatedBy},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+            <if test="adopt != null">
+                adopt = #{adopt},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="vaccinat != null">
+                vaccinat = #{vaccinat},
+            </if>
+            <if test="vaccinatImages != null and vaccinatImages != ''">
+                vaccinat_images = #{vaccinatImages},
+            </if>
+            <if test="descb != null and descb != ''">
+                descb = #{descb},
+            </if>
+            <if test="buyShop != null and buyShop != ''">
+                buy_shop = #{buyShop},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from pet where id = #{id}
+    </delete>
+    <select id="getPageListByCondition" resultMap="PetMap">
+        select a.*,c.user_name,b.name from pet a,variety b,users c where  a.variety_id =b.id and c.id=a.user_id
+        <if test="page.key.petName != null and page.key.petName != ''">
+            <bind name="pattern" value="'%' + page.key.petName + '%'" />
+            and a.pet_name like #{pattern}
+        </if>
+        <if test="page.key.adopt != null">
+            and a.adopt =#{page.key.adopt}
+        </if>
+        <if test="page.key.userId != null">
+            and a.user_id =#{page.key.userId}
+        </if>
+        <if test="page.key.varietyId != null">
+            and a.variety_id =#{page.key.varietyId}
+        </if>
+        <if test="page.key.vaccinat != null">
+            and a.vaccinat =#{page.key.vaccinat}
+        </if>
+        <if test="page.key.createdBy != null and page.key.createdBy != ''">
+            and a.created_by =#{page.key.createdBy}
+        </if>
+        order by
+        a.created_at desc
+        <!--分页查询-->
+        <!--比如 pageNum=1 pageSize=10为 第一页开始 查10条数据 ((#{page.pageNum}-1)*#{page.pageSize})=0*10,10 则表示从1开始查10条数据-->
+        limit  #{page.startNum} , #{page.pageSize}
+    </select>
+    <select id="getPageListCount" resultType="int">
+        select count(a.id) as count from pet a,variety b,users c where a.variety_id =b.id and c.id=a.user_id
+        <if test="page.key.petName != null and page.key.petName != ''">
+            <bind name="pattern" value="'%' + page.key.petName + '%'" />
+            and a.pet_name like #{pattern}
+        </if>
+        <if test="page.key.userId != null">
+            and a.user_id =#{page.key.userId}
+        </if>
+        <if test="page.key.varietyId != null">
+            and a.variety_id =#{page.key.varietyId}
+        </if>
+        <if test="page.key.adopt != null">
+            and a.adopt =#{page.key.adopt}
+        </if>
+        <if test="page.key.vaccinat != null">
+            and a.vaccinat =#{page.key.vaccinat}
+        </if>
+        <if test="page.key.createdBy != null and page.key.createdBy != ''">
+            and a.created_by =#{page.key.createdBy}
+        </if>
+    </select>
+</mapper>

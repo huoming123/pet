@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.design.petmanagement.mapper.UsersMapper">
+
+    <resultMap type="com.design.petmanagement.pojo.Users" id="UsersMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+        <result property="cardId" column="card_id" jdbcType="VARCHAR"/>
+        <result property="role" column="role" jdbcType="VARCHAR"/>
+        <result property="age" column="age" jdbcType="INTEGER"/>
+        <result property="excellent" column="excellent" jdbcType="INTEGER"/>
+        <result property="sex" column="sex" jdbcType="VARCHAR"/>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+        <result property="image" column="image" jdbcType="VARCHAR"/>
+        <result property="nation" column="nation" jdbcType="VARCHAR"/>
+        <result property="birthday" column="birthday" jdbcType="TIMESTAMP"/>
+        <result property="nativePlace" column="native_place" jdbcType="VARCHAR"/>
+        <result property="maritalStatus" column="marital_status" jdbcType="VARCHAR"/>
+        <result property="political" column="political" jdbcType="VARCHAR"/>
+        <result property="userNo" column="user_no" jdbcType="VARCHAR"/>
+        <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+        <result property="deletedBy" column="deleted_by" jdbcType="VARCHAR"/>
+        <result property="deletedAt" column="deleted_at" jdbcType="TIMESTAMP"/>
+        <result property="profession" column="profession" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UsersMap">
+        select
+         *
+        from users
+        where id = #{id}
+    </select>
+
+    
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into users(user_name, password, address, created_at, created_by, card_id, role, age, sex, telephone, image, nation, birthday, native_place, marital_status, political, updated_by, updated_at, deleted_by, deleted_at, profession,user_no,excellent)
+        values (#{userName}, #{password}, #{address}, now(), #{createdBy}, #{cardId}, #{role}, #{age}, #{sex}, #{telephone}, #{image}, #{nation}, #{birthday}, #{nativePlace}, #{maritalStatus}, #{political}, #{updatedBy}, #{updatedAt}, #{deletedBy}, #{deletedAt}, #{profession},#{userNo},0)
+    </insert>
+
+   
+    <!--通过主键修改数据-->
+    <update id="update">
+        update users
+        <set>
+            <if test="userName != null and userName != ''">
+                user_name = #{userName},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="createdBy != null and createdBy != ''">
+                created_by = #{createdBy},
+            </if>
+            <if test="cardId != null and cardId != ''">
+                card_id = #{cardId},
+            </if>
+            <if test="role != null and role != ''">
+                role = #{role},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="excellent != null">
+                excellent = #{excellent},
+            </if>
+            <if test="sex != null and sex != ''">
+                sex = #{sex},
+            </if>
+            <if test="telephone != null and telephone != ''">
+                telephone = #{telephone},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="nation != null and nation != ''">
+                nation = #{nation},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="nativePlace != null and nativePlace != ''">
+                native_place = #{nativePlace},
+            </if>
+            <if test="maritalStatus != null and maritalStatus != ''">
+                marital_status = #{maritalStatus},
+            </if>
+            <if test="political != null and political != ''">
+                political = #{political},
+            </if>
+            <if test="updatedBy != null and updatedBy != ''">
+                updated_by = #{updatedBy},
+            </if>
+            <if test="deletedBy != null and deletedBy != ''">
+                deleted_by = #{deletedBy},
+            </if>
+            <if test="deletedAt != null">
+                deleted_at = #{deletedAt},
+            </if>
+            <if test="profession != null and profession != ''">
+                profession = #{profession},
+            </if>
+            updated_at = now(),
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from users where id = #{id}
+    </delete>
+    <!--根据员工编号获取数据-->
+    <select id="getByUserNo" resultMap="UsersMap">
+         select * from users where user_no =#{userNo} and role =#{role}
+    </select>
+    <select id="getWorkerList" resultMap="UsersMap">
+        select * from users where created_at is not null and role= 'worker'
+        <if test="excellent != null ">
+            and  excellent=1
+        </if>
+
+    </select>
+    <select id="getPageListByCondition" resultMap="UsersMap">
+    select * from users where created_at is not null
+        <if test="page.key.role != null and page.key.role != ''">
+            and role = #{page.key.role}
+        </if>
+        <if test="page.key.userName != null and page.key.userName != ''">
+            <bind name="pattern" value="'%' + page.key.userName + '%'" />
+            and user_name like #{pattern}
+        </if>
+        <if test="page.key.cardId != null and page.key.cardId != ''">
+            <bind name="pattern" value="'%' + page.key.cardId + '%'" />
+            and card_id like #{pattern}
+        </if>
+        <if test="page.key.address != null and page.key.address != ''">
+            <bind name="pattern" value="'%' + page.key.address + '%'" />
+            and address like #{pattern}
+        </if>
+        order by
+        created_at desc
+        <!--分页查询-->
+        <!--比如 pageNum=1 pageSize=10为 第一页开始 查10条数据 ((#{page.pageNum}-1)*#{page.pageSize})=0*10,10 则表示从1开始查10条数据-->
+        limit  #{page.startNum} , #{page.pageSize}
+    </select>
+    <select id="getPageListCount" resultType="int">
+    select count(id) as count from users where  created_at is not null
+        <if test="page.key.role != null and page.key.role != ''">
+            and role = #{page.key.role}
+        </if>
+        <if test="page.key.userName != null and page.key.userName != ''">
+            <bind name="pattern" value="'%' + page.key.userName + '%'" />
+            and user_name like #{pattern}
+        </if>
+        <if test="page.key.cardId != null and page.key.cardId != ''">
+            <bind name="pattern" value="'%' + page.key.cardId + '%'" />
+            and card_id like #{pattern}
+        </if>
+        <if test="page.key.address != null and page.key.address != ''">
+            <bind name="pattern" value="'%' + page.key.address + '%'" />
+            and address like #{pattern}
+        </if>
+    </select>
+    <!--根据身份证获取数据-->
+    <select id="getByCardId" resultMap="UsersMap">
+        select * from users where card_id=#{cardId}
+    </select>
+    <select id="getPeterList"  resultMap="UsersMap">
+        select * from users where role='peter';
+    </select>
+    <update id="updateRole">
+        update users set role=#{role} where id=#{id}
+    </update>
+    <update id="updatePassword">
+       update users set password=#{password} where id =#{id}
+    </update>
+</mapper>
