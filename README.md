@@ -2,6 +2,8 @@
 
 #接计算机毕业设计（代码注释详细+做完会录制视频讲解  需要加微信13650154582）  
 
+#接计算机毕业设计（代码注释详细+做完会录制视频讲解 需要加微信13650154582）   
+
 #b站地址链接：https://www.bilibili.com/video/BV1cD4y1u7bA/?spm_id_from=333.337.search-card.all.click&vd_source=b648d6736b802d4ea0613920edef4754 
 
 #介绍（项目包含源码+开题报告+论文+开题答辩PPT+毕业答辩PPT）(需要完整项目文件加微信13650154582)  
@@ -30,5 +32,8 @@
             ![Image text](https://github.com/huoming123/-pet-/blob/main/%E5%85%AC%E5%91%8A%E4%BF%A1%E6%81%AF%E5%BD%95%E5%85%A5.png)  
             ![Image text](https://github.com/huoming123/-pet-/blob/main/%E7%9B%91%E6%8A%A4%E4%BA%BA%E5%B9%B4%E9%BE%84%E5%88%86%E5%B8%83%E5%9B%BE.png)
                ![Image text](https://github.com/huoming123/-pet-/blob/main/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E5%88%86%E6%9E%90.png)
-                ![Image text](https://github.com/huoming123/-pet-/blob/main/%E5%AE%A0%E7%89%A9%E7%99%BB%E8%AE%B0%E5%88%86%E6%9E%90.png)
+                ![Image text](https://github.com/huoming123/-pet-/blob/main/%E5%AE%A0%E7%89%A9%E7%99%BB%E8%AE%B0%E5%88%86%E6%9E%90.png)  
+#接计算机毕业设计（代码注释详细+做完会录制视频讲解  需要加微信13650154582）  
+
+#接计算机毕业设计（代码注释详细+做完会录制视频讲解 需要加微信13650154582）   
           
