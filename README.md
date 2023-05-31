@@ -24,6 +24,7 @@
 #项目界面截图  
 
 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)  
+![Image text](https://github.com/huoming123/pet/blob/main/%E5%AE%A0%E7%89%A9%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.png)
 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E7%99%BB%E8%AE%B0.png)   
   ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%B7%A5%E4%BD%9C%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2.png)
        ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%89%A9%E7%A7%8D%E5%BD%95%E5%85%A5.png)
