@@ -1,8 +1,6 @@
 #宠物管理系统（b站有项目演示以及详细代码讲解）  
 
-#接计算机毕业设计（代码注释详细+做完会录制视频讲解  需要加微信13650154582）  
-
-#接计算机毕业设计（代码注释详细+做完会录制视频讲解 需要加微信13650154582）   
+#接计算机毕业设计
 
 #b站地址链接：https://www.bilibili.com/video/BV1cD4y1u7bA/?spm_id_from=333.337.search-card.all.click&vd_source=b648d6736b802d4ea0613920edef4754 
 
@@ -33,7 +31,5 @@
             ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E7%9B%91%E6%8A%A4%E4%BA%BA%E5%B9%B4%E9%BE%84%E5%88%86%E5%B8%83%E5%9B%BE.png)
                ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E6%8C%82%E5%A4%B1%E5%88%86%E6%9E%90.png)
                 ![Image text](https://github.com/huoming123/pet/blob/main/%E9%A1%B9%E7%9B%AE%E7%95%8C%E9%9D%A2%E7%85%A7%E7%89%87/%E5%AE%A0%E7%89%A9%E7%99%BB%E8%AE%B0%E5%88%86%E6%9E%90.png)
-#接计算机毕业设计（代码注释详细+做完会录制视频讲解  需要加微信13650154582）  
 
-#接计算机毕业设计（代码注释详细+做完会录制视频讲解 需要加微信13650154582）   
           
